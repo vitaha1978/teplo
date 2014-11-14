@@ -1,0 +1,93 @@
+/* --------------------------------------
+  Bootstrap
+-------------------------------------- */
+
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+
+/* --------------------------------------
+  Global settings
+-------------------------------------- */
+body {
+    background: asset_url('main/body_bg.png');
+  }
+    .welly {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176);
+  }
+    .brand {
+    color: #FF4500;
+  }
+/* --------------------------------------
+  Container
+-------------------------------------- */
+  #container {
+    padding-bottom: 20px;
+  }
+/* --------------------------------------
+  Navbar
+-------------------------------------- */
+  #navbar.navbar {
+    margin-bottom: 10px;
+    min-height: 30px;
+  .form-control {
+    max-height: 25px;
+    margin-top: 3px;
+  }
+  .btn {
+    padding: 3px 7px;
+  }
+  .search {
+    padding: 1px 1px 5px 3px;
+  }
+  button {
+    height: 25px;
+    margin-top: 3px;
+  }
+  .navbar-nav > li > a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .navbar-brand {
+    height: 30px;
+    padding: 5px 30px;
+  }
+  .navbar-form {
+    padding-left: 20px;
+      margin: 4px -15px;
+    }
+  }
+  .nav {
+    .caret {
+      margin-left: 9px;
+    }
+  }
+  .dropdown-menu{
+    .dropdown-header {
+      color: #FF4500;
+    }
+  }
+/* --------------------------------------
+  Footer Styles
+-------------------------------------- */
+  footer {
+    margin-top: 5px;
+    padding: 5px 40px 5px 40px;
+    color: #999;
+    a {
+      color: #555;
+    }
+    a:hover {
+      color: #222;
+    }
+    small {
+      float: left;
+    }
+      ul {
+        float: right;
+        list-style: none;
+      }
+    li {
+      float: left;
+      margin-left: 50px;
+    }
+  }

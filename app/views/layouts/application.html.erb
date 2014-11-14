@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Teplo</title>
+  <title>ТеплоМаркет - центр сучасних технологій</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <%= render 'layouts/nav' %>
+  
+  <!-- Main component for a primary marketing message or call to action -->
+  <div id="container" class="container welly">
+    <div class="row">
+      <div class="col-lg-3">
+        <%= render 'layouts/sidebar' %>
+        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;" role="tablist">
+          <li role="presentation">
+          <%= yield :aside %>
+          </li>
+        </ul>
+      </div><!-- /col-lg-3 -->
+    <div class="col-lg-9">
+      <% [:notice, :alert].each do |level| %>
+        <% if flash[level] %>
+          <div class="flash <% flash[level] %>">
+            <%= flash[level] %>
+          </div>
+        <% end %>
+      <% end %>
+    <%= yield %>
+    </div> <!-- /col-lg-9 -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+  
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>
