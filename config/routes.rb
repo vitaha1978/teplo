@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+
   get 'static_pages/contacts'
   root 'static_pages#contacts'
   
