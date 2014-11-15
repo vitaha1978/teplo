@@ -70,6 +70,43 @@ body {
   }
 
 /* --------------------------------------
+  SideBar Styles
+-------------------------------------- */
+  .panel-heading {
+    .panel-title {
+      a {
+        font-size: 14px;
+        display: block;
+      }
+    }
+   }
+
+    .panel-body {
+      ul {
+        padding-left: 10px;
+      }
+      li {
+        list-style: none;
+        a {
+          display: block;
+        }
+      }      
+      img {
+        margin: 15px 20px 10px 5px;
+        float: left;
+      }
+    }
+    #accordion {
+      padding-top: 5px;
+      .panel-heading {
+        .panel-title {
+          font-weight: bold;
+          color: #2A6496;
+        }
+      }
+    }
+
+/* --------------------------------------
   Footer Styles
 -------------------------------------- */
   footer {
