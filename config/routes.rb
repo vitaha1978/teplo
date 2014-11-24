@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :themes
+
   resources :articles
 
-  get 'static_pages/contacts'
   root 'static_pages#contacts'
+  match '/contacts', to: 'static_pages#contacts', via: 'get'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

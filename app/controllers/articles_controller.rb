@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with name: "vitaha", password: "Vini_2306", except: [:index, :show]
+  
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
