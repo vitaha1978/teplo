@@ -1,36 +1,21 @@
 <div class="panel-group welly" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading welly">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Тепла підлога
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse">
-    <div class="panel-body">
-      <ul>
-        <li><a href="#">Тепла підлога Hemstedt</a></li>
-        <li><a href="#">Тепла підлога Raychem</a></li>
-        <li><a href="#">Тепла підлога Thermoland</a></li>
-      </ul>
-    </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading welly">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Покриття для підлоги
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse">
+  <% all_themes.each do |theme| %>
+    <div class="panel panel-default">
+      <div class="panel-heading welly">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            <%= theme.name %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
       <div class="panel-body">
-        <ul>
-          <li><a href="#">Ламінат "Kronotex" (Німеччина)</a></li>
+        <ul>            
+            <li><a href="#">Тепла підлога Raychem</a></li>
+            <li><a href="#">Тепла підлога Thermoland</a></li>
         </ul>
       </div>
+      </div>
     </div>
-  </div>
+  <% end %>  
 </div>

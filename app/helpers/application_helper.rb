@@ -10,4 +10,9 @@ module ApplicationHelper
     end
   end
   
+  # Returne all themes  
+  def all_themes
+    @themes = Theme.all
+  end
+  
 end
