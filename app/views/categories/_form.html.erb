@@ -1,0 +1,24 @@
+<%= form_for(@category) do |f| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2>Виправіть будь ласка неточності у кількості: <%= @category.errors.count %> шт. </h2>
+      <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Назва" %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :theme_id, "Категорія" %><br>
+    <%= f.collection_select(:theme_id, Theme.all, :id, :name, {prompt: "Виберіть категорію"}, {class: "form-control"}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Зберегти", class: "btn btn-sm btn-primary" %>
+  </div>
+<% end %>

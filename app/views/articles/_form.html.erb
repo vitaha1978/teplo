@@ -26,7 +26,7 @@
   </div>
   <div class="field">
     <%= f.label :category_id, "Категорія" %><br>
-    <%= f.number_field :category_id, class: "form-control" %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: "Виберіть категорію"}, {class: "form-control"}) %>
   </div>
   <div class="field">
     <%= f.label :company_id, "Компанія" %><br>
