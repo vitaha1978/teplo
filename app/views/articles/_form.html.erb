@@ -31,7 +31,12 @@
   <div class="field">
     <%= f.label :company_id, "Компанія" %><br>
     <%= f.number_field :company_id, class: "form-control" %>
-  </div><br>
+  </div>
+  <div class="field">
+    <%= f.label :user_id, "Автор" %><br>
+    <%= f.collection_select(:user_id, User.all, :id, :name, {prompt: "Виберіть автора"}, {class: "form-control"}) %>
+  </div>
+  <br>
   <div class="actions">
     <%= f.submit "Зберегти", class: "btn btn-sm btn-primary" %>
   </div>
