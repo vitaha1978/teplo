@@ -1,27 +1,19 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @article.url %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @article.category_id %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @article.company_id %>
-</p>
+<div id="articles" class="panel panel-default">
+<div class="panel-heading"><%= link_to @article.title, @article %>
+<span class="pull-right">
+<small>Автор: <%= link_to @article.user.name, @article.user %></small>
+</span>
+</div>
+<div class="panel-body">
+<div><%= @article.content %></div>
+</div>
+<div class="info">
+<small class="pull-left"><span> Створено: </span> <%= @article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small>
+<small class="pull-right"><span> Категорія: </span> <%= link_to @article.category.name, @article.category %> </small>
+<small class="pull-right"><span> Торгова марка: </span> <%= link_to @article.company.name, @article.company %> </small>
+</div>
+</div>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

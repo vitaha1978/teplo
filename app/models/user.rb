@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  
   has_many :articles
   
   validates :name, length: { minimum: 4 }

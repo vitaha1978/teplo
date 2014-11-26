@@ -16,6 +16,7 @@
         <td><%= link_to 'Редагувати', edit_user_path(user) %></td>
         <td><%= link_to 'Видалити', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <%= user.articles.count %>
     <% end %>
   </tbody>
 </table>
