@@ -12,18 +12,18 @@
     </span>
     </div>
     <div class="panel-body">
-    <div><%= article.content %></div>
+      <div><%= article.content %></div>
     </div>
     <div class="info">
-    <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small>
-    <small class="pull-right"><span> Категорія: </span>
-      <%  if article.category %> 
-        <%= link_to article.category.name, article.category %>
-      <% end %> </small>
-    <small class="pull-right"><span> Торгова марка: </span>
-      <%  if article.company %>
-        <%= link_to article.company.name, article.company %>
-      <% end %>
+      <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small>
+      <small class="pull-right"><span> Категорія: </span>
+        <%  if article.category %> 
+          <%= link_to article.category.name, article.category %>
+        <% end %> </small>
+      <small class="pull-right"><span> Торгова марка: </span>
+        <%  if article.company %>
+          <%= link_to article.company.name, article.company %>
+        <% end %>
       </small>
     </div>
   </div>
