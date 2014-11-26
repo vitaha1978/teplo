@@ -12,6 +12,11 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    if (params[:url])
+      @article = Article.find_by url: params[:url]
+    else
+      @article = Article.find(params[:id])
+    end
   end
 
   # GET /articles/new

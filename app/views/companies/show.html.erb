@@ -1,0 +1,12 @@
+<p>
+  <strong>Назва:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Логотип:</strong>
+  <%= @company.img %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
