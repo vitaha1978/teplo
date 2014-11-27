@@ -3,21 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #article {
+  margin-bottom: 40px;
+  .panel-body {
+    padding: 20px;
+  }
+  .text-right {
+    margin: 5px 15px 10px 0;
+  }
   .field {
     margin-bottom: 10px;
   }
-}
-
-#article {
-margin-bottom: 40px;
-.text-right {
-margin: 5px 15px 10px 0;
-}
-span {
-color: grey;
-}
-small {
-margin: 5px 10px 0 10px;
-color: grey;
-}
+  span {
+    color: grey;
+  }
+  small {
+    margin: 5px 10px 0 10px;
+    color: grey;
+  }
+  img {
+    float: left;
+    margin-right: 10px;
+  }
 }
