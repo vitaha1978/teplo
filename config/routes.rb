@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :articles
   
   get ':url' => 'articles#show'
-  root 'static_pages#contacts'
+  root 'articles#index'
   match '/contacts', to: 'static_pages#contacts', via: 'get'
   
 
