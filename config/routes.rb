@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
+  
   resources :companies
-
   resources :users
-
   resources :categories
-
-  resources :themes
-
+  resources :themes  
   resources :articles
-
+  
+  get ':url' => 'articles#show'
   root 'static_pages#contacts'
   match '/contacts', to: 'static_pages#contacts', via: 'get'
   
