@@ -12,12 +12,14 @@
         <%= truncate(article.content, length: 400, separator: ' ', escape: false) %>
       </div>
       <div class="pull-right">
-        <%= link_to "Детальніше...", article, class: 'pull-right' %>
+        <%= link_to "Детальніше...", article.url, class: 'pull-right' %>
       </div>
     </div>
     <div class="info">
       <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small>
       <small class="pull-right"><span> Категорія: </span> <%= link_to article.category.name, article.category %> </small>
-      <small class="pull-right"><span> Торгова марка: </span> <%= link_to article.company.name, article.company %> </small>
+      <% if article.company %>
+        <small class="pull-right"><span> Торгова марка: </span> <%= link_to article.company.name, article.company %> </small>
+      <% end %>
     </div>
   </div>

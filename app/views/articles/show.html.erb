@@ -20,9 +20,9 @@
           <%= link_to @article.category.name, @article.category %>
         <% end %>
     </small>
-    <small class="pull-right">
-      <span> Торгова марка: </span> 
-        <%  if @article.category %>
+    <small class="pull-right">       
+        <%  if @article.company %>
+          <span> Торгова марка: </span>
           <%= link_to @article.company.name, @article.company %> 
         <% end %>
     </small>
