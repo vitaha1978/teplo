@@ -1,5 +1,5 @@
   <div id="article" class="panel panel-default">
-    <div class="panel-heading"><%= link_to article.title, article.url %>
+    <div class="panel-heading"><%= link_to article.title, article %>
       <span class="pull-right">
         <small>Автор: <%= link_to article.user.name, article.user %></small>
       </span>
@@ -12,7 +12,7 @@
         <%= truncate(article.content, length: 400, separator: ' ', escape: false) %>
       </div>
       <div class="pull-right">
-        <%= link_to "Детальніше...", article.url, class: 'pull-right' %>
+        <%= link_to "Детальніше...", article, class: 'pull-right' %>
       </div>
     </div>
     <div class="info">

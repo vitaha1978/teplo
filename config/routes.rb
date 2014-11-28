@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
   
+  root 'articles#index'
+  match '/contacts', to: 'static_pages#contacts', via: 'get'
+  
+  resources :categories do
+    resources :articles
+  end
+  
   resources :companies
   resources :users
   resources :categories
   resources :themes  
   resources :articles
   
-  get ':url' => 'articles#show'
+  get '/category/:url' => 'articles#show'  
   
-  root 'articles#index'
-  match '/contacts', to: 'static_pages#contacts', via: 'get'
+  
   
 
   # The priority is based upon order of creation: first created -> highest priority.
