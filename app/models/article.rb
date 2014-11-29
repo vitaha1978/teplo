@@ -1,4 +1,8 @@
 class Article < ActiveRecord::Base
+  extend FriendlyId
+  
+  friendly_id :url
+  
   belongs_to :category
   belongs_to :company
   belongs_to :user
@@ -8,4 +12,6 @@ class Article < ActiveRecord::Base
   validates :category_id, presence: true
   validates :url, length: { minimum: 5 }
   validates :url, uniqueness: true
+  
+  
 end
