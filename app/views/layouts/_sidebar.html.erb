@@ -2,8 +2,8 @@
   <% all_themes.each do |theme| %>
     <div class="panel panel-default">
       <div class="panel-heading welly">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= theme.id %>">
+        <h4 class="panel-title" >
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= theme.id %>" aria-expanded="true">
             <%= theme.name %>
           </a>
         </h4>
@@ -20,3 +20,4 @@
     </div>
   <% end %>  
 </div>
+
