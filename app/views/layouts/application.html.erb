@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div><!-- /col-lg-3 -->
-    <div class="col-lg-9">
+    <div class="col-lg-6">
       <% [:notice, :alert].each do |level| %>
         <% if flash[level] %>
           <div class="flash <% flash[level] %>">
@@ -32,7 +32,10 @@
         <% end %>
       <% end %>
     <%= yield %>
-    </div> <!-- /col-lg-9 -->
+    </div> <!-- /col-lg-6 -->
+      <div class="col-md-3">
+        <%= render 'layouts/right_sidebar' %>
+      </div>
     </div> <!-- /row -->
   </div> <!-- /container -->
   
