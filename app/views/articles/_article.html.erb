@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="info">
-      <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small>
+<!--         <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small> -->
       <small class="pull-right"><span> Категорія: </span> <%= link_to article.category.name, article.category %> </small>
       <% if article.company %>
         <small class="pull-right"><span> Торгова марка: </span> <%= link_to article.company.name, article.company %> </small>
