@@ -1,39 +1,14 @@
-<div class="left-sidebar panel-group welly" id="accordion">
-  <% all_themes.each do |theme| %>
-    <div class="panel panel-default">
-      <div class="panel-heading welly">
-        <h4 class="panel-title" >
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= theme.id %>">
-            <%= theme.name %>
-          </a>
-        </h4>
-      </div>
-      <div id="collapse<%= theme.id %>" class="panel-collapse collapse active">
-      <div class="panel-body">
-        <ul>
-          <% theme.categories.each do |category| %>
-            <li><%= link_to category.name, category %></li>
-          <% end %>
-        </ul>
-      </div>
-      </div>
-    </div>
-  <% end %>  
-</div>
-
-
-
 <div class="left-sidebar panel-group welly" id="accordion" role="tablist" aria-multiselectable="true">
   <% all_themes.each do |theme| %>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= theme.id %>" aria-expanded="true" aria-controls="collapse<%= theme.id %>">
           <%= theme.name %>
         </a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapse<%= theme.id %>" class="panel-collapse collapseс in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
         <% theme.categories.each do |category| %>
           <li><%= link_to category.name, category %></li>

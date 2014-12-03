@@ -15,4 +15,6 @@ module ApplicationHelper
     @themes = Theme.all
   end
   
+  
+  
 end

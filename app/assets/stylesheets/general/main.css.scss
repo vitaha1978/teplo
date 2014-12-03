@@ -96,7 +96,7 @@ body {
    }
 
     .panel-body {      
-      padding: 5px;
+      padding: 7px;
       
       ul {
         padding-left: 15px;
@@ -104,6 +104,7 @@ body {
       li {
         list-style: none;
         a {
+          margin: 5px 5px;
           font-size: 13px;
           display: block;
         }
