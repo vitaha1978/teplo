@@ -5,10 +5,6 @@ Rails.application.routes.draw do
   root 'articles#index'
   match '/contacts', to: 'static_pages#contacts', via: 'get'
   
-  resources :categories do
-    resources :articles
-  end
-  
   resources :companies
   resources :users
   resources :categories
