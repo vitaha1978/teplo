@@ -7,10 +7,12 @@
     height: 40px;
   }
   .header {
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 12px;
     margin-top: 0;
   }
   .caption {
+    position:relative;
     padding: 5px;
     height: 160px;
     hr {
@@ -19,6 +21,14 @@
     p {
       font-size: 12px;
       margin-bottom: 3px;
+    }
+    p.bottom {
+      
+      a {
+        position:absolute;
+        bottom: 8px;
+        left: 10px;
+      }
     }
   }
 }

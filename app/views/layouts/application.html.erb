@@ -16,14 +16,11 @@
   <div id="container" class="container welly">    
     <div class="row">
       <div class="col-lg-3">
-        <%= render 'layouts/sidebar' %>
-        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;" role="tablist">
-          <li role="presentation">
-          <%= yield :aside %>
-          </li>
-        </ul>
+        <%= render 'layouts/sidebar' %>        
       </div><!-- /col-lg-3 -->
     <div class="col-lg-6">
+      
+      <%= render 'layouts/companies' %>      
       <% [:notice, :alert].each do |level| %>
         <% if flash[level] %>
           <div class="flash <% flash[level] %>">
