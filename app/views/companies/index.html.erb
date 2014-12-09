@@ -4,14 +4,14 @@
   <% @companies.each do |company| %>
     <div id="companies">
       <div class="col-sm-6 col-md-4">
-        <div class="thumbnail welly">
-          <%= image_tag('main/' + company.img, class: "img-thumbnail") %>
+        <%= image_tag('main/' + company.img, class: "img-thumbnail welly") %>
+        <div class="thumbnail welly">          
           <div class="caption">
             <%= link_to company.name, company %>
             <p><%= truncate(company.describe, length: 100, separator: ' ', escape: false) %></p>
             <p><%= link_to "Детальніше", company, class: "btn btn-primary btn-xs" %></p>
           </div>
-        </div>
+        </div>        
       </div>
     </div>
   <% end %>
