@@ -4,7 +4,7 @@
   <% @companies.each do |company| %>
     <div id="companies">
       <div class="col-sm-6 col-md-4">
-        <%= image_tag('main/' + company.img, class: "img-thumbnail welly") %>
+        <%= image_tag('main/' + company.img, class: "img-thumbnail") %>
         <div class="thumbnail welly">          
           <div class="caption">
             <div class="header"><%= link_to company.name, company %></div><hr>

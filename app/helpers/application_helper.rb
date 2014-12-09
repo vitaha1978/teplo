@@ -17,7 +17,7 @@ module ApplicationHelper
   
   # Returne random 3 companies
   def random_companies
-   Company.order("RAND()").limit(3)
+   Company.all.sample(3) 
   end
   
   
