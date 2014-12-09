@@ -3,13 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #companies {
-  h3 {
+  img {
+    height: 40px;
+  }
+  .header {
     font-size: 14px;
     margin-top: 0;
   }
   .caption {
+    padding: 5px;
+    min-height: 150px;
+    hr {
+      margin: 5px 3px;
+    }
     p {
-      font-size: 10px;
+      font-size: 12px;
+      margin-bottom: 3px;
     }
   }
 }

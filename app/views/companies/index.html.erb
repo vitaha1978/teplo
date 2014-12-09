@@ -7,7 +7,7 @@
         <%= image_tag('main/' + company.img, class: "img-thumbnail welly") %>
         <div class="thumbnail welly">          
           <div class="caption">
-            <%= link_to company.name, company %>
+            <div class="header"><%= link_to company.name, company %></div><hr>
             <p><%= truncate(company.describe, length: 100, separator: ' ', escape: false) %></p>
             <p><%= link_to "Детальніше", company, class: "btn btn-primary btn-xs" %></p>
           </div>
@@ -17,18 +17,6 @@
   <% end %>
 </div>
 
-<table class="table table-hover">
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><strong><%= link_to company.name, company %></strong></td>
-        <td><%= image_tag('main/' + company.img) %></td>        
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <br>
-
 
 <%= link_to 'New Company', new_company_path %>
