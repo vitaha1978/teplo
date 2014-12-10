@@ -1,0 +1,29 @@
+<h3 class="brand">Популярні продукти</h3>
+<div id="product" class="panel panel-default">
+  <% random_products.each do |product| %>
+  <div class="panel-heading"><%= link_to product.title, product %>
+      <span class="pull-right">
+      </span>
+    </div>
+    <div class="panel-body">
+      <% if product.img %>
+      <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
+      <% end %>
+      <div>
+        <%= truncate(product.description, length: 400, separator: ' ', escape: false) %>
+      </div>
+      <div class="details">
+        <%= link_to "Детальніше...", product, class: 'pull-right' %>
+      </div>
+      <div class="price_line">
+        <span class="brand">
+          Ціна: <%= sprintf("%0.02f", product.price) %> грн.
+        </span>    
+      </div>
+      
+    </div>
+    <div class="info">
+      
+    </div>
+  <% end %>
+  </div>

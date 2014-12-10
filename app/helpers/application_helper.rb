@@ -20,6 +20,11 @@ module ApplicationHelper
    Company.all.sample(3) 
   end
   
+  # Returne random 3 companies
+  def random_products
+    Product.all.sample(3) 
+  end
+  
   
   
   
