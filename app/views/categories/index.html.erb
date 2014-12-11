@@ -13,7 +13,6 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= category.theme.name %></td>
         <td><%= link_to 'Перглянути', category %></td>
         <td><%= link_to 'Редагувати', edit_category_path(category) %></td>
         <td><%= link_to 'Видалити', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
