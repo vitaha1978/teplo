@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   
   resources :products
 
-  root 'articles#index'
+  root 'static_pages#index'
   match '/contacts', to: 'static_pages#contacts', via: 'get'
+  match '/', to: 'static_pages#index', via: 'get'
   
   resources :companies
   resources :users

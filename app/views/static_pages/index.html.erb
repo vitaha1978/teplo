@@ -1,0 +1,7 @@
+<% provide( :title, "Центр сучасних технологій" ) %> 
+<% provide( :description, "Продаж монтаж сервіс та обслуговування систем тепла підлога, система сніготанення, ламінат, економне едектричне опалення Рівне" ) %> 
+
+<%= render 'layouts/products' %>
+<%= render 'layouts/companies' %>
+
+<%= render partial: "articles/article", collection: @articles %>

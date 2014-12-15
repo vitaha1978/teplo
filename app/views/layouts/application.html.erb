@@ -18,9 +18,7 @@
       <div class="col-lg-3">
         <%= render 'layouts/sidebar' %>        
       </div><!-- /col-lg-3 -->
-    <div class="col-lg-6">   
-      <%= render 'layouts/products' %>
-      <%= render 'layouts/companies' %>      
+    <div class="col-lg-6">             
       <% [:notice, :alert].each do |level| %>
         <% if flash[level] %>
           <div class="flash <% flash[level] %>">
