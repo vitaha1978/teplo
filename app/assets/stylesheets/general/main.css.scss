@@ -29,6 +29,22 @@ body {
 -------------------------------------- */
   #container {
     padding-bottom: 20px;
+    h3, h1 {
+      margin-top: 5px;
+    }
+    .breadcrumbs {
+        li {
+          display: inline-block;
+        }
+        li + li:before {
+          color: #cccccc;
+          content: "/ ";
+          padding: 0 5px;
+        }
+        list-style: outside none none;
+        margin-bottom: 5px;
+        padding: 8px 15px;
+    }
   }
 
 /* --------------------------------------
