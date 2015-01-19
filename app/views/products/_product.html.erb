@@ -9,7 +9,7 @@
         <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
       <% end %>
       <div>
-        <%= truncate(product.description, length: 10, separator: ' ', escape: false) %>
+        <%= truncate(product.description, length: 300, separator: ' ', escape: false) %>
       </div>
       <div class="details">
         <%= link_to "Детальніше...", product, class: 'pull-right' %>
@@ -20,8 +20,5 @@
         </span>    
       </div>
       
-    </div>
-    <div class="info">
-      sdrbgse
-    </div>
+    </div>    
   </div>

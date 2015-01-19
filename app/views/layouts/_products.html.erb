@@ -7,7 +7,7 @@
     </div>
     <div class="panel-body">
       <% if product.img %>
-      <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
+        <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
       <% end %>
       <div>
         <%= truncate(product.description, length: 400, separator: ' ', escape: false) %>
