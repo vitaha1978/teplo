@@ -19,7 +19,7 @@
 <!--         <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small> -->
       <small class="pull-right">        
         <% if article.category %>
-          <span> Категорія: </span><%= link_to article.category.name, article.category %>
+          <span class="pull-left"> Категорія: </span><%= link_to article.category.name, article.category %>
         <% end %>
         <% if article.company %>
           <span> Торгова марка: </span> <%= link_to article.company.name, article.company %>
