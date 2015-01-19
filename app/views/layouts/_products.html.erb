@@ -1,6 +1,8 @@
 <h3 class="brand">Популярні продукти</h3>
+
+<% random_products.each do |product| %>
 <div id="product" class="panel panel-default">
-  <% random_products.each do |product| %>
+  
   <div class="panel-heading"><%= link_to product.title, product %>
       <span class="pull-right">
       </span>
@@ -25,5 +27,6 @@
     <div class="info">
       
     </div>
-  <% end %>
+  
   </div>
+<% end %>
