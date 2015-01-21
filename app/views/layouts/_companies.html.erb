@@ -1,7 +1,7 @@
 <div class="row">
-  <% random_companies.each do |company| %>
-    <div id="companies">
-      <div class="col-sm-6 col-md-4">
+  <div id="companies">
+  <% random_companies.each do |company| %>    
+      <div class="col-md-3">
         <%= image_tag('main/' + company.img, class: "img-thumbnail") %>
         <div class="thumbnail welly">          
           <div class="caption">
@@ -10,7 +10,7 @@
             <p class="bottom"><%= link_to "Детальніше", company, class: "btn btn-primary btn-xs" %></p>
           </div>
         </div>        
-      </div>
-    </div>
+      </div>    
   <% end %>
+    </div>
 </div>

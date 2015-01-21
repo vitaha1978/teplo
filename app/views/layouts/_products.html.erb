@@ -1,32 +1,33 @@
 <h3 class="brand">Популярні продукти</h3>
+<div class="row">
+  <% random_products.each do |product| %>
+  <div class="col-md-6">
+  <div id="product" class="panel panel-default">
+    <div class="panel-heading"><%= link_to product.title, product %>
+        <span class="pull-right">
+        </span>
+      </div>
+      <div class="panel-body">
+        <% if product.img %>
+          <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
+        <% end %>
+        <div>
+          <%= truncate(product.description, length: 400, separator: ' ', escape: false) %>
+        </div>
+        <div class="details">
+          <%= link_to "Детальніше...", product, class: 'pull-right' %>
+        </div>
+        <div class="price_line">
+          <span class="brand">
+            Ціна: <%= sprintf("%0.02f", product.price) %> грн.
+          </span>    
+        </div>
 
-<% random_products.each do |product| %>
-<div id="product" class="panel panel-default">
-  
-  <div class="panel-heading"><%= link_to product.title, product %>
-      <span class="pull-right">
-      </span>
-    </div>
-    <div class="panel-body">
-      <% if product.img %>
-        <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
-      <% end %>
-      <div>
-        <%= truncate(product.description, length: 400, separator: ' ', escape: false) %>
       </div>
-      <div class="details">
-        <%= link_to "Детальніше...", product, class: 'pull-right' %>
+      <div class="info">
+
       </div>
-      <div class="price_line">
-        <span class="brand">
-          Ціна: <%= sprintf("%0.02f", product.price) %> грн.
-        </span>    
-      </div>
-      
     </div>
-    <div class="info">
-      
     </div>
-  
-  </div>
 <% end %>
+</div>
