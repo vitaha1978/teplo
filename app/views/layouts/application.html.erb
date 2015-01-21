@@ -15,10 +15,10 @@
   <!-- Main component for a primary marketing message or call to action -->
   <div id="container" class="container welly">    
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-7">
         <%= render 'layouts/sidebar' %>        
       </div><!-- /col-md-3 -->
-      <div class="col-md-7">             
+      <div class="col-md-3">             
       <% [:notice, :alert].each do |level| %>
         <% if flash[level] %>
           <div class="flash <% flash[level] %>">
@@ -33,7 +33,7 @@
       </ol> -->
     <%= yield %>
     </div> <!-- /col-md-6 -->
-      <div class="col-md-1">
+      <div class="col-md-2">
         <%= render 'layouts/right_sidebar' %>
       </div>
     </div> <!-- /row -->
