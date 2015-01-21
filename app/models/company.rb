@@ -4,7 +4,7 @@ class Company < ActiveRecord::Base
   validates :name, :img, :url, :describe, presence: true
   validates :img, allow_blank: true, format: {
     with: %r{\.(gif|jpg|png)\Z}i,
-    message: 'URL должен указывать на изображение формата GIF, JPG или PNG.'
+    message: 'URL повинен відповідати формату GIF, JPG або PNG.'
   }
   
   friendly_id :url
