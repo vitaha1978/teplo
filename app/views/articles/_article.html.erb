@@ -1,4 +1,6 @@
-  <div id="article" class="panel panel-default">
+
+  <div class="col-md-6">
+<div id="article" class="panel panel-default">
     <div class="panel-heading"><%= link_to article.title, article %>
       <span class="pull-right">
         <small>Автор: <%= link_to article.user.name, article.user %></small>
@@ -16,7 +18,6 @@
       </div>
     </div>
     <div class="info">
-<!--         <small class="pull-left"><span> Створено: </span> <%= article.created_at.strftime('%I:%M, %d-%B-%Y') %> </small> -->
       <small class="pull-right">        
         <% if article.category %>
           <span class="pull-left"> Категорія: </span> <%= link_to article.category.name, article.category %>
@@ -26,4 +27,5 @@
         <% end %>
       </small>
     </div>
+  </div>
   </div>

@@ -1,12 +1,13 @@
 <% provide( :title, "Центр сучасних технологій" ) %> 
 <% provide( :description, "Тепла підлога, система сніготанення, ламінат, економне едектричне опалення Рівне, інфрачервона тепла підлога, електричне опалення, панелі ENSA, електричні радіатори OPTIMAX, підігрів трубопроводів, " ) %> 
 
-<div claaa="row">
+
   <%= render 'layouts/companies' %>
-</div>
 
-<div claaa="row">
+
+
   <%= render 'layouts/products' %>
-</div>
 
-<%= render partial: "articles/article", collection: @articles %>
+<div class="row"> 
+  <%= render partial: "articles/article", collection: @articles %>
+</div>
