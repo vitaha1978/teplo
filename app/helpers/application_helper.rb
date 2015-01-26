@@ -25,6 +25,10 @@ module ApplicationHelper
     Product.all.sample(3) 
   end
   
+  # Returne random 3 companies
+  def articles
+    Product.all 
+  end
   
   
   
