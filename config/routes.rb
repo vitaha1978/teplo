@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'store/index'
+  match '/store', to: 'store#index', via: 'get'
 
   root 'static_pages#index'
   
