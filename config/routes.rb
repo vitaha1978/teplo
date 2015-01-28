@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   match '/store', to: 'store#index', via: 'get'
 
-  root 'store#index'
+  root 'static_pages#index'
   
   match '/contacts', to: 'static_pages#contacts', via: 'get'
   match '/', to: 'static_pages#index', via: 'get'
