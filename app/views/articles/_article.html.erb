@@ -1,30 +1,29 @@
-
   <div id="article" class="panel panel-default">
-      <div class="panel-heading"><%= link_to article.title, article %>
-        <span class="pull-right">
-          <small>Автор: <%= link_to article.user.name, article.user %></small>
-        </span>
+    <div class="panel-heading"><%= link_to article.title, article %>
+      <span class="pull-right">
+        <small>Автор: <%= link_to article.user.name, article.user %></small>
+      </span>
+    </div>
+    <div class="panel-body">
+      <% if article.img %>
+        <%= image_tag('main/' + article.img, :class => "img-thumbnail") %>
+      <% end %>
+      <div>
+        <%= truncate(article.content, length: 400, separator: ' ', escape: false) %>
       </div>
-      <div class="panel-body">
-        <% if article.img %>
-          <%= image_tag('main/' + article.img, :class => "img-thumbnail") %>
-        <% end %>
-        <div>
-          <%= truncate(article.content, length: 400, separator: ' ', escape: false) %>
-        </div>
-        <div class="pull-right">
-          <%= link_to "Детальніше...", article, class: 'pull-right' %>
-        </div>
-      </div>
-      <div class="info">
-        <small class="pull-right">        
-          <% if article.category %>
-            <span class="pull-left"> Категорія: </span> <%= link_to article.category.name, article.category %>
-          <% end %>
-          <% if article.company %>
-            <span> Торгова марка: </span> <%= link_to article.company.name, article.company %>
-          <% end %>
-        </small>
+      <div class="pull-right">
+        <%= link_to "Детальніше...", article, class: 'pull-right' %>
       </div>
     </div>
+    <div class="info">
+      <small class="pull-right">        
+        <% if article.category %>
+          <span class="pull-left"> Категорія: </span> <%= link_to article.category.name, article.category %>
+        <% end %>
+        <% if article.company %>
+          <span> Торгова марка: </span> <%= link_to article.company.name, article.company %>
+        <% end %>
+      </small>
+    </div>
+  </div>
  
