@@ -1,2 +1,26 @@
-<h1>Store#index</h1>
-<p>Find me in app/views/store/index.html.erb</p>
+<h1 class="brand">каталог продукції</h1>
+
+<% @products.each do |product| %>
+<div id="product" class="panel panel-default">
+  <div class="panel-heading"><%= link_to product.title, product %>
+      <span class="pull-right">
+      </span>
+    </div>
+    <div class="panel-body">
+      <% if product.img %>
+        <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
+      <% end %>
+      <div>
+        <%= truncate(product.description, length: 300, separator: ' ', escape: false) %>
+      </div>
+      <div class="details">
+        <%= link_to "Детальніше...", product, class: 'pull-right' %>
+      </div>
+      <div class="price_line">
+        <span class="brand">
+          Ціна: <%= sprintf("%0.02f", product.price) %> грн.
+        </span>    
+      </div>      
+    </div>    
+  </div>
+<% end %>
