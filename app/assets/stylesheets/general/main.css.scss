@@ -188,14 +188,16 @@ RightSidebar Styles
   #right_sidebar {
     margin-top: 5px;    
       .adress {
-        h3.panel-title {
+        h2.panel-title {
         color: white;
+        font-size: 14px;
       }
       .panel-body {
         padding-top: 10px;
+        font-size: 12px;
       }
       .panel-heading {
-        padding: 5px 15px;
+        padding: 3px 15px;
       }
     }
     #aktsiya {
@@ -226,6 +228,7 @@ RightSidebar Styles
       }
       h3, h4, h5 {
         text-align: center;
+        font-size: 14px;
       }
     }
   }
