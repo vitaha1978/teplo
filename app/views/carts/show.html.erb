@@ -1,4 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div id="cart">
+  <h1 class="brand">Ваша корзина</h1>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Найменування</th>
+        <th>Кількість</th>
+        <th>Ціна</th>
+        <th>Сума</th>
+      </tr>
+    </thead>
+    <tbody> 
+      <% @cart.line_items.each do |item| %>
+        <tr>    
+          <td><%= item.product.title %></td>
+          <td><%= item.quantity %></td>
+          <td><%= sprintf("%0.02f",item.product.price) %></td>
+          <td><%= sprintf("%0.02f",item.total_price) %></td>        
+        </tr>
+      <% end %>
+      <tr class="total brand">
+        <td colspan="2"></td>
+        <td>Всього:</td>
+        <td><%= sprintf("%0.02f", @cart.total_price) %></td>
+      </tr>
+    </tbody>
+  </table>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+  <%= button_to 'Очистити корзину', @cart, method: :delete,
+               data: { confirm: 'Ви впевнені?' }, class: "btn btn-warning btn-xs" %>
+
+</div>
