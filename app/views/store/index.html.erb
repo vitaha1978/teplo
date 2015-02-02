@@ -11,15 +11,17 @@
         <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
       <% end %>
       <div>
-        <%= truncate(product.description, length: 300, separator: ' ', escape: false) %>
+        <%= truncate(product.description, length: 300, separator: ' ', escape: false) %>        
+          <%= link_to "Детальніше...", product, class: 'pull-right details' %>       
       </div>
-      <div class="details">
-        <%= link_to "Детальніше...", product, class: 'pull-right' %>
-      </div>
+      
       <div class="price_line">
         <span class="brand">
           Ціна: <%= sprintf("%0.02f", product.price) %> грн.
-        </span>    
+          
+        </span> 
+        <%= button_to 'Додати до корзини', line_items_path(product_id: product),
+                          class: "btn btn-primary btn-xs" %>
       </div>      
     </div>    
   </div>
