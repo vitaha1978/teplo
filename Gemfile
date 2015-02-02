@@ -12,6 +12,7 @@ gem 'rails', '4.1.6'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'friendly_id', '~> 5.0.4'
+gem 'yaml_db'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

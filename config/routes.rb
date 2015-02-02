@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :carts
+
   match '/store', to: 'store#index', via: 'get'
 
   root 'static_pages#index'
