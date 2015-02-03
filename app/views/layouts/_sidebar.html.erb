@@ -1,9 +1,12 @@
 <div class="left-sidebar panel-group welly" id="accordion" role="tablist" aria-multiselectable="true">
+  <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+    <%= render @cart %>
+  <% end %>
   <% all_themes.each do |theme| %>
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= theme.id %>" aria-expanded="true" aria-controls="collapse<%= theme.id %>">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= theme.id %>" aria-expanded="true" aria-controls="collapse<%= theme.id %>">          
           <%= theme.name %>
         </a>
       </h4>
