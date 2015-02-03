@@ -7,7 +7,7 @@
     
     <tr class="total brand">
         <td colspan="2"><%= button_to 'Очистити корзину', cart, method: :delete,
-               data: { confirm: 'Ви впевнені?' }, class: "btn btn-warning btn-xs" %></td>
+               data: { confirm: 'Ви впевнені?' }, remote: true, class: "btn btn-warning btn-xs" %></td>
         <td>Всього:</td>
         <td><%= sprintf("%0.02f", @cart.total_price) %></td>
       </tr>
