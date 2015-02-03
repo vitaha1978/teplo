@@ -8,13 +8,13 @@
           </div>
           <div class="panel-body">
             <% if product.img %>
-              <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
+              <div><%= image_tag('products/' + product.img, :class => "img-thumbnail") %></div>
             <% end %>
             <div>
               <%= truncate(product.description, length: 200, separator: ' ', escape: false) %>
             </div>
             <div class="details">
-              <%= link_to "Детальніше...", product, class: 'pull-right' %>              
+              <%= link_to "Деталі...", product, class: 'pull-right' %>              
             </div>
             <div class="price_line">
               <span class="brand">

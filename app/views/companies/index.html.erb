@@ -8,8 +8,8 @@
         <div class="thumbnail welly">          
           <div class="caption">
             <div class="header"><%= link_to company.name, company %></div><hr>
-            <p><%= truncate(company.describe, length: 100, separator: ' ', escape: false) %></p>
-            <p class="bottom"><%= link_to "Детальніше", company, class: "btn btn-primary btn-xs" %></p>
+            <p><%= truncate(company.describe, length: 100, separator: ' ', escape: false) %></p><hr>
+            <%= link_to "Детальніше", company, class: "btn btn-primary btn-xs" %>
           </div>
         </div>        
       </div>

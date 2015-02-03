@@ -14,7 +14,9 @@
   .caption {
     position:relative;
     padding: 5px;
-    height: 160px;
+    .details {
+      font-size: 11px;
+    }
     hr {
       margin: 5px 3px;
     }
