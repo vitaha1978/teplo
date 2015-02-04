@@ -8,10 +8,8 @@
       <span class="pull-right">
       </span>
     </div>
-    <div class="panel-body click">
-      
-        <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>
-      
+    <div class="panel-body click">      
+        <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>      
       <div>
         <%= truncate(product.description, length: 300, separator: ' ', escape: false) %>        
           <%= link_to "Детальніше...", product, class: 'pull-right details' %>       
