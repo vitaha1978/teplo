@@ -1,7 +1,9 @@
 <h1 class="brand">каталог продукції</h1>
+<div id="store" class="row">
 
 <% @products.each do |product| %>
-<div id="product" class="panel panel-default">
+<div class="col-md-6">
+<div class="panel panel-default">
   <div class="panel-heading"><%= link_to product.title, product %>
       <span class="pull-right">
       </span>
@@ -25,4 +27,7 @@
       </div>      
     </div>    
   </div>
+  </div>
 <% end %>
+
+</div>
