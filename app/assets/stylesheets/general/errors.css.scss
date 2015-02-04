@@ -1,6 +1,12 @@
+.field_with_errors {
+  color: #FF4500;
+}
+.flash {
+  color: #FF4500;
+}
 #error_explanation {
   h2 {
-    color: red;
+    color: #FF4500;
     font-size: 18px;
   }
 }

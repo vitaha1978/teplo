@@ -1,29 +1,26 @@
 Rails.application.routes.draw do
   
   resources :orders
-
   resources :line_items
-
-  resources :carts
-
-  match '/store', to: 'store#index', via: 'get'
-
-  root 'static_pages#index'
-  
-  match '/contacts', to: 'static_pages#contacts', via: 'get'
-  match '/', to: 'static_pages#index', via: 'get'
-  
+  resources :carts  
   resources :products
   resources :companies
   resources :users
   resources :categories
   resources :themes  
   resources :articles
+
+  root 'static_pages#index'
   
-  get '/category/:url' => 'articles#show'  
+  resources :products do
+    get :who_bought, on: :member
+  end
   
+  match '/store', to: 'store#index', via: 'get'
+  match '/contacts', to: 'static_pages#contacts', via: 'get'
+  match '/', to: 'static_pages#index', via: 'get'  
   
-  
+  get '/category/:url' => 'articles#show'    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
