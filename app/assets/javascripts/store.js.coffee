@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on "ready page:change", ->
-  $('.col-md-6 .panel-body > img').click ->
+  $('#store .click > img').click ->
     $(this).parent().find(':submit').click()
