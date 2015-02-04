@@ -8,15 +8,12 @@
     <tr>
       <td  colspan="4" class="total brand text-right">Всього: <%= sprintf("%0.02f", @cart.total_price) %></td>
     </tr>
-    <tr class="total">
+    <tr class="total test">
       <td colspan="2" class="text-left"><%= link_to 'Очистити корзину', cart, method: :delete,
                data: { confirm: 'Ви впевнені?' }, remote: true %></td>
-      <td colspan="2" class="text-right"><%= button_to 'Оформити замовлення', new_order_path, method: :get, class: "btn btn-info btn-xs" %></td>
-      
-    </tr>
-        
-        
-      
+      <td colspan="2" class="text-right"><%= button_to 'Оформити замовлення',
+          new_order_path, method: :get, class: "btn btn-info btn-xs" %></td>      
+      </tr>     
     </tbody>
   </table>
 
