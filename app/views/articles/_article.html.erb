@@ -11,11 +11,9 @@
         <%= image_tag('main/' + article.img, :class => "img-thumbnail") %>
       <% end %>
       <div>
-        <%= truncate(article.content, length: 400, separator: ' ', escape: false) %>
+        <%= article.content.html_safe %>
       </div>
-      <div class="pull-right">
-        <%= link_to "Детальніше...", article, class: 'pull-right' %>
-      </div>
+      
     </div>
     <div class="info">
       <small class="pull-right">        
