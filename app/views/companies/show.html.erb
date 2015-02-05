@@ -1,4 +1,8 @@
 <% provide( :title, @company.name ) %> 
 
-<%= render partial: "articles/article", collection: @company.articles %>
+<%= @company.name %><br>
+<%= @company.describe %><br>
+
+
+
 <%= link_to 'Видалити', @company, method: :delete, data: { confirm: 'Ви впевнені?' } %>
