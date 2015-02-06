@@ -8,10 +8,10 @@
           </div>
           <div class="panel-body">
             <% if product.img %>
-              <div><%= image_tag('products/' + product.img, :class => "img-thumbnail") %></div>
+              <div class="text-center"><%= image_tag('products/' + product.img, :class => "img-thumbnail") %></div>
             <% end %>
             <div>
-              <%= truncate(product.description.html_safe, length: 200, separator: ' ', escape: false) %>
+              <%= truncate(product.description.html_safe, length: 150, separator: ' ', escape: false) %>
             </div>
             <div class="details">
               <%= link_to "Деталі...", product, class: 'pull-right' %>              
