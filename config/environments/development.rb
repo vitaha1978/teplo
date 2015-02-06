@@ -2,12 +2,12 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.delivery_method = :smtp
   
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "gmail.com",
+ config.action_mailer.smtp_settings = {
+    address: "smtp.mail.ru",
+    port: 465,
+    domain: "mail.ru",
     authentication: "plain",
-    user_name: "vitaliy.parshyn@gmail.com",
+    user_name: "vip_ltd@mail.ru",
     password: "Vini_2306",
     enable_starttls_auto: true
   }
