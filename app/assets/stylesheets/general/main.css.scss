@@ -8,9 +8,7 @@
 /* --------------------------------------
   Global settings
 -------------------------------------- */
-.col-md-2 {
-    width: 16.65%;
-}
+
 body {
     background: asset_url('main/body_bg.png');
   }
@@ -28,6 +26,10 @@ body {
   }
   .float {
     float: left;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
   }
 
 /* --------------------------------------

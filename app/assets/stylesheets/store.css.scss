@@ -2,5 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #store {
-  
+  .panel-heading {
+    font-size: 12px;
+  }
+  .image {
+    
+  }
+  img {
+    height: 150px;
+  }
+  .text {
+    font-size: 13px;
+  }
+  .price_line {
+    margin-top: 10px;
+    input {
+      margin-top: 7px;
+      margin-left: 30px;
+    }
+    .brand {
+      
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
 }

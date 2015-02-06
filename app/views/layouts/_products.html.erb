@@ -19,7 +19,9 @@
             <div class="price_line">
               <span class="brand">
                 Ціна: <%= sprintf("%0.02f", product.price) %> грн.
-              </span>    
+              </span>
+              <%= button_to 'Додати до корзини', line_items_path(product_id: product), remote: true, 
+                          class: "btn btn-primary btn-xs" %>
             </div>
           </div><!-- /.panel-body -->
           <div class="info">   </div>

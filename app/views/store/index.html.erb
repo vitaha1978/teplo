@@ -1,4 +1,4 @@
-<h1 class="brand">каталог продукції</h1>
+<h1 class="brand">Каталог продукції</h1>
 <div id="store" class="row">
 
 <% @products.each do |product| %>
@@ -8,17 +8,18 @@
       <span class="pull-right">
       </span>
     </div>
-    <div class="panel-body click">      
+    <div class="panel-body ">
+      <div class="text-center">
         <%= image_tag('products/' + product.img, :class => "img-thumbnail") %>      
-      <div>
+      </div>
+      <div class="text">
         <%= truncate(product.description, length: 300, separator: ' ', escape: false) %>        
           <%= link_to "Детальніше...", product, class: 'pull-right details' %>       
       </div>
       
       <div class="price_line">
         <span class="brand">
-          Ціна: <%= sprintf("%0.02f", product.price) %> грн.
-          
+          Ціна: <%= sprintf("%0.02f", product.price) %> грн.          
         </span> 
         <%= button_to 'Додати до корзини', line_items_path(product_id: product), remote: true, 
                           class: "btn btn-primary btn-xs" %>
