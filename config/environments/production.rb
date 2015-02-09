@@ -4,11 +4,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.mail.ru",
+    address: "smtp.ukr.net",
     port: 465,
-    domain: "mail.ru",
+    domain: "ukr.net",
     authentication: "plain",
-    user_name: "vip_ltd@mail.ru",
+    user_name: "tm_vip@ukr.net",
     password: "Vini_2306",
     enable_starttls_auto: true
   }
