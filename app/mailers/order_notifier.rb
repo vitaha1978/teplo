@@ -1,7 +1,7 @@
 class OrderNotifier < ActionMailer::Base
   default from: "ТеплоМаркет"
   
-  def reseived(order)
+  def received(order)
     @order = order
     mail to: order.email, subject: 'Підтвердження замовлення на www.teplomarket.com.ua'
   end
