@@ -1,6 +1,6 @@
 class OrderNotifier < ActionMailer::Base
   default from: 'ТеплоМаркет',
-    tamplate_path: 'mailers/notification'
+    template_path: 'mailers/notification'
   
   def received(order)
     @order = order
