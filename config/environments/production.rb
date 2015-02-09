@@ -1,5 +1,5 @@
 Rails.application.configure do
- .
+ 
   config.cache_classes = true
 
   config.action_mailer.delivery_method = :smtp
