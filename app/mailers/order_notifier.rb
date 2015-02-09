@@ -1,14 +1,10 @@
 class OrderNotifier < ActionMailer::Base
-  default from: "ТеплоМаркет"
+  default from: 'ТеплоМаркет',
+    tamplate_path: 'mailers/notification'
   
   def received(order)
     @order = order
     mail to: order.email, subject: 'Підтвердження замовлення на www.teplomarket.com.ua'
-  end
-  
-  def shipped(order)    
-    @order = order
-    mail to: order.email, subject: 'Замовлення з www.teplomarket.com.ua відправлено'
   end
   
   def notification(order)
