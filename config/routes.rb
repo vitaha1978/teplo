@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :carts  
   resources :products
   resources :companies
-  resources :users
   resources :categories
   resources :themes  
   resources :articles
