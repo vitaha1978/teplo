@@ -1,4 +1,6 @@
 class OrderNotifier < ActionMailer::Base
+  include SendGrid
+  
   default from: 'ТеплоМаркет',
     template_path: 'mailers/notification'
   
