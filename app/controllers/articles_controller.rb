@@ -1,8 +1,6 @@
 class ArticlesController < ApplicationController
   skip_before_action :authorize, only: [:index, :show]
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
-  
-  http_basic_authenticate_with name: "vitaha", password: "Vini_2306", except: [:index, :show]
+  before_action :set_article, only: [:show, :edit, :update, :destroy] 
   
 #   before_action :set_article, only: [:show, :edit, :update, :destroy]
 

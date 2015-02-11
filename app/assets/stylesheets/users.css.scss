@@ -5,3 +5,22 @@
 #user {
   width: 70%;
 }
+#user_area {
+  .panel-heading {
+    padding: 5px 0 10px  20px;
+    color: #2a6496;
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  .panel-body { 
+    padding-bottom: 10px;
+    ul {
+      padding-left: 10px;
+    }
+    li {
+      list-style: outside none none;
+    }
+  }
+}
