@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+  skip_before_action :authorize, only: [:index, :show, :create, :new]
 
   # GET /users
   # GET /users.json

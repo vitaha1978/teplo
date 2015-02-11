@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  skip_before_action :authorize, only: [:index, :show]
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   # GET /companies
