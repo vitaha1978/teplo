@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize
+  
   def new
   end
 
@@ -9,6 +11,7 @@ class SessionsController < ApplicationController
       redirect_to admin_url
     else
       redirect_to login_url, alert: "Невірна комбінація імені та паролю"
+    end
   end
 
   def destroy

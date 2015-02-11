@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authorize, only: [:index, :show]
   http_basic_authenticate_with name: "vitaha", password: "Vini_2306", except: [:index, :show]
   
   before_action :set_category, only: [:show, :edit, :update, :destroy]
