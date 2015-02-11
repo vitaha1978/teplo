@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  skip_before_action :authorize, only: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
   http_basic_authenticate_with name: "vitaha", password: "Vini_2306", except: [:index, :show]
