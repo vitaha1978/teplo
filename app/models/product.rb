@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  extend FriendlyId
+  
   has_many :line_items
   has_many :orders, through: :line_items
   
@@ -11,6 +13,8 @@ class Product < ActiveRecord::Base
     with: %r{\.(gif|jpg|png)\Z}i,
     message: 'URL повинен відповідати формату GIF, JPG або PNG.'
   }
+  
+  friendly_id :label
   
   private
   
