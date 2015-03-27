@@ -1,6 +1,6 @@
-role :app, %w{deploy@178.62.248.89}
-role :web, %w{deploy@178.62.248.89}
-role :db, %w{deploy@178.62.248.89}
+role :app, %w{deploy@95.47.114.84}
+role :web, %w{deploy@95.47.114.84}
+role :db, %w{deploy@95.47.114.84}
 
 set :stage, :production # This is necessary for production deployment
 
@@ -11,4 +11,4 @@ set :stage, :production # This is necessary for production deployment
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 
-server '178.62.248.89', user: 'deploy', roles: %w{web app}
+server '95.47.114.84', user: 'deploy', roles: %w{web app}
